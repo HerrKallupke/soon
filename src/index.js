@@ -18,7 +18,7 @@ app.listen(http, () => {
 })
 
 const options = { key: fs.readFileSync(key), cert: fs.readFileSync(certificate) }
-https_server.createServer(options, () => {
+https_server.createServer(options).listen(https, () => {
     log(`Https server running on port ${https}`)
 })
 
